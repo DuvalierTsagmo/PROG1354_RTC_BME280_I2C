@@ -1,4 +1,11 @@
 
+/*
+  Titre      : Ntion de maitre et esclave avec le ESP32
+  Auteur     : Duvalier Tsagmo
+  Date       : 18/03/2022
+  Description: comprendre comment communique un capteur avec un I2C a l'aide du BME L'ecran OLED et le RTC
+  Version    : 0.0.1
+*/
 
 /*
   Rui Santos
@@ -135,7 +142,7 @@ void loop()
 
         Serial.println();
         delay(2000);
-
+        // Affichage de la temperature du BME 280
         display.clearDisplay();
         // display temperature
         display.setTextSize(1);
@@ -164,7 +171,7 @@ void loop()
         delay(5000);
 
         display.clearDisplay();
-
+        // Affichage de la date et l'heure de RTC sur l'ecran OLED
         DateTime now = rtc.now();
 
         display.setTextSize(1);
